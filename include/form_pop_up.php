@@ -13,7 +13,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.
                 <input type="text" class="form_input" name="form_text_1" placeholder="Фамилия*">
                 <input type="text" class="form_input" name="form_text_2" placeholder="Имя*">
                 <input type="text" class="form_input" name="form_text_3" placeholder="Отчество*">
-                <input class="phone" type="tel" class="form_input" name="form_text_4" placeholder="Телефон*">
+                <input type="tel" class="form_input phone" name="form_text_4" placeholder="Телефон*">
                 <input type="email" class="form_input" name="form_email_5" placeholder="E-mail*">
             </div>
             <button type="submit" class="pop-up__submit_btn">Сохранить</button>
