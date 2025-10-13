@@ -16,11 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" || $_POST['WEB_FORM_ID'] > 0) {
         CFormCRM::onResultAdded($webFormID, $RESULT_ID);
         CFormResult::SetEvent($RESULT_ID);
         CFormResult::Mail($RESULT_ID);
-        file_put_contents($_SERVER['DOCUMENT_ROOT'].'/ajax/debug.txt', "Form Check Errors: ".print_r($formErrors, true)."\n", FILE_APPEND);
-        file_put_contents($_SERVER['DOCUMENT_ROOT'].'/ajax/debug.txt', "Form Check Errors: ".print_r($RESULT_ID, true)."\n", FILE_APPEND);
         echo json_encode(['success' => true, 'errors' => []]);
     } else {
-        file_put_contents($_SERVER['DOCUMENT_ROOT'].'/ajax/debug.txt', "Form Check Errors: ".print_r($formErrors, true)."\n", FILE_APPEND);
         echo json_encode(['success' => false, 'errors' => [$GLOBALS["strError"]]]);
     }
 }

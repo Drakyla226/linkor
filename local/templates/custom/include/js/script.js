@@ -67,10 +67,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function openPopUp() {
         form.classList.add('open');
+        $('body').addClass('no-scroll');
     }
 
     function closePopUp() {
         form.classList.remove('open');
+        $('body').removeClass('no-scroll');
     }
 
     jsOpenPopUp.forEach(btn => btn.addEventListener('click', openPopUp));
